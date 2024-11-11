@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TIRTHA NATH - DSA Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #121212 url('https://wallpapercave.com/wp/wp8778363.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f4f4f4;
+            line-height: 1.6;
+            padding: 0;
+            animation: fadeInBody 2s ease-out;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            text-align: center;
+            padding: 4rem 0;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            animation: slideInHeader 1.5s ease-out;
+        }
+
+        header img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            color: #f79c42;
+            animation: fadeInHeaderText 1.5s ease-out;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: #40E0D0;
+            z-index: 1;
+            animation: fadeInSubtext 2s ease-out;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(44, 44, 44, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            margin-top: 2rem;
+            animation: fadeInContainer 2s ease-out;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 3rem;
+            animation: fadeInSection 1.5s ease-out;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #f79c42;
+            margin-bottom: 1rem;
+            animation: slideInHeading 1.2s ease-out;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            animation: fadeInText 2s ease-out;
+        }
+
+        .list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .list-item {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            animation: fadeInListItems 1.8s forwards;
+        }
+
+        .list-item:hover {
+            transform: scale(1.05);
+        }
+
+        .list-item strong {
+            color: #40E0D0;
+        }
+
+        .skills-tools-subheading {
+            color: #40E0D0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 1rem;
+            background-color: #40E0D0;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: pulseButton 1.5s infinite;
+        }
+
+        .btn:hover {
+            background-color: #30b7a2;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            background-image: url('https://wallpapercave.com/wp/wp8778363.jpg');
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(10px);
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            animation: fadeInFooter 2s ease-out;
+        }
+
+        footer p {
+            z-index: 1;
+            color: #40E0D0;
+        }
+
+        @keyframes fadeInBody { 0% { opacity: 0; } 100% { opacity: 1; } }
+        @keyframes slideInHeader { 0% { transform: translateY(-50px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+        @keyframes fadeInHeaderText { 0% { opacity: 0; transform: translateY(-30px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInSubtext { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInContainer { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInSection { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes slideInHeading { 0% { opacity: 0; transform: translateX(-50px); } 100% { opacity: 1; transform: translateX(0); } }
+        @keyframes fadeInText { 0% { opacity: 0; } 100% { opacity: 1; } }
+        @keyframes fadeInListItems { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes pulseButton { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        @keyframes fadeInFooter { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+        @media (max-width: 768px) {
+            .container { padding: 2rem; }
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1rem; }
+            .section h2 { font-size: 2rem; }
+            footer p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Background Image -->
+    <img src="https://wallpapercave.com/wp/wp8778363.jpg" alt="Coding Background">
+    <!-- Profile & Title -->
+    <h1>TIRTHA NATH</h1>
+    <p>My Journey in Data Structures & Algorithms</p>
+</header>
+
+<div class="container">
+    <!-- Introduction -->
+    <section class="section">
+        <h2>Introduction</h2>
+        <p>Hello! I'm <strong>Tirtha Nath</strong>, a developer passionate about Data Structures and Algorithms. I have gained practical experience through platforms like SRM, Elab, and HackerRank, focusing on problem-solving and algorithm design.</p>
+    </section>
+
+    <!-- Learning Platforms & Courses -->
+    <section class="section">
+        <h2>Learning Platforms & Courses</h2>
+        <ul class="list">
+            <li class="list-item"><span class="skills-tools-subheading">SRM DSA Path</span> - Learned core algorithms and data structures like arrays, trees, and dynamic programming.</li>
+            <li class="list-item"><span class="skills-tools-subheading">Elab Challenges</span> - Solved algorithmic problems focused on graph theory, recursion, and optimization.</li>
+            <li class="list-item"><span class="skills-tools-subheading">HackerRank</span> - Completed 5-star challenges in algorithms, dynamic programming, and data structures.</li>
+        </ul>
+    </section>
+
+    <!-- Key Projects and Achievements -->
+    <section class="section">
+        <h2>Key Projects & Achievements</h2>
+        <ul class="list">
+            <li class="list-item"><span class="skills-tools-subheading">Sorting Algorithms Visualizer (C)</span> - Created a visualizer for sorting algorithms like QuickSort and MergeSort.</li>
+            <li class="list-item"><span class="skills-tools-subheading">Graph Traversal (C)</span> - Implemented BFS and DFS for efficient graph traversal.</li>
+            <li class="list-item"><span class="skills-tools-subheading">Dynamic Programming</span> - Optimized Fibonacci sequence calculation using dynamic programming.</li>
+            <li class="list-item"><span class="skills-tools-subheading">HackerRank Challenges</span> - Solved 100+ problems, excelling in data structures, dynamic programming, and algorithms.</li>
+            <li class="list-item"><span class="skills-tools-subheading">Binary Search Trees (C)</span> - Built a BST with insert, delete, and search operations in C.</li>
+        </ul>
+    </section>
+
+    <!-- Skills & Tools -->
+    <section class="section">
+        <h2>Skills & Tools</h2>
+        <ul class="list">
+            <li class="list-item"><span class="skills-tools-subheading">Languages:</span> <span style="color: #f4f4f4;">C, C++, Java, Python</span></li>
+            <li class="list-item"><span class="skills-tools-subheading">Core Concepts:</span> <span style="color: #f4f4f4;">Arrays, Linked Lists, Trees, Graphs, Sorting, Dynamic Programming</span></li>
+            <li class="list-item"><span class="skills-tools-subheading">Platforms:</span> <span style="color: #f4f4f4;">HackerRank, SRM, Elab</span></li>
+            <li class="list-item"><span class="skills-tools-subheading">Tools:</span> <span style="color: #f4f4f4;">GitHub, CodeBlocks, GCC Compiler</span></li>
+        </ul>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section contact-info">
+        <h2>Contact</h2>
+        <p>Feel free to connect with me for collaborations or DSA discussions:</p>
+        <p>GitHub: <a href="https://github.com/TIRTHANATH20" target="_blank" class="btn">Visit My GitHub</a></p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Tirtha Nath. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
